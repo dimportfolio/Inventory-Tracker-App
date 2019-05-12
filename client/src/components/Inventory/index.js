@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Item from "../components/Items"
+import Item from "../Items";
 
 class Inventory extends Component {
 
@@ -18,11 +18,12 @@ class Inventory extends Component {
         </thead>
         <tbody>
           {this.props.inventory.map((item)=>(
-            <Item item={item}/>
+            <Item key={item.id} item={item}/>
           ))}
         </tbody>
       </table>
     );
   }
 }
+
 export default Inventory;
